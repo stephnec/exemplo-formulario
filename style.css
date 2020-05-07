@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: lavender;
+}
+
+h1{
+    text-align: center;
+    color: #aaa;
+}
+
+form{
+    width: 600px;
+    margin: 50px auto;
+    border-radius: 5px;
+ }
+
+ fieldset{
+    border: 1px solid #eee;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    background-color: #fff;
+    border-radius: 10px;
+ }
+
+ legend{
+    font-size: 21px;
+    color: #aaa;   
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0 15px;
+ }
+  
+label{
+    display: inline-block;
+    margin: 30px 20px 0 20px;
+    color: #777;
+    font-size: 18px;
+}
+
+input, select, textarea{
+    margin-top: 20px;
+    border: 1px solid #eee;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+select,
+textarea{
+    width: 90%;
+    margin-top: 15px;
+    margin-left: 5%;
+    padding: 3px;
+    border: 1px solid #CCC;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    height: 28px;
+    font-size: 16px;
+}
+
+textarea{
+  height: 150px;
+  resize: none;
+}
+
+.parte{
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+    height: auto;
+}
+
+.labelTorta{
+    width: 100%;
+}
+
+.botao{
+    text-align: right;
+    margin-right: 5%;
+  }
+  
+input[type="submit"],
+input[type="reset"]{
+    margin: 35px 0;
+    cursor: pointer;
+    width: 100px;
+    border: 1px solid rgb(40,155,190);
+    background-color: rgb(40,155,190);
+    color: #fff;
+    padding: 7px;
+    font-size: 16px;
+    border-radius: 5px;    
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+  }
+  
+input[type="submit"]:hover,
+input[type="reset"]:hover{
+    background-color: rgba(40,155,190,0.7);
+}

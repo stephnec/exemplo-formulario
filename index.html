@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercicios 2 - Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Formulário</h1>
+    <form id="acesso" action="logar" method="get">
+        <fieldset>
+            <legend>Acesso</legend>
+            <label for="idUsuario">Usuário:</label>
+            <input id="idUsuario" type="text" name="usuario">
+
+            <label for="idSenha">Senha:</label>
+            <input id="idSenha" type="password" name="senha" maxlength="12">
+            <div class="botao">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </fieldset>
+    </form>
+
+    <form id="preferencias" action="cadastrar" method="get">
+        <fieldset>
+            <legend>Preferências</legend>
+            <label for="idNome">Nome:</label>
+            <input id="idNome" type="text" name="nome" class="nome">
+
+            <label for="idEmail">E-mail:</label>
+            <input id="idEmail" type="email" name="email" class="email">
+
+            <label for="idCor">Cor Favorita:</label>
+            <select name="corFavorita" id="idCor">
+                <option disabled selected>Selecione uma opção</option>
+                <option value="az">Azul</option>
+                <option value="pr">Preto</option>
+                <option value="vm">Vermelho</option>
+                <option value="vr">Verde</option>
+                <option value="am">Amarela</option>
+                <option value="br">Branco</option>
+            </select>
+
+            <!--Radio-->
+            <div class="parte">
+                <label for="manequim">Manequim:</label>
+                <div class="row-form">
+                    <input id="idtPequeno" type="radio" name="tamanho" value="pequeno">
+                    <label for="idtPpequeno">Pequeno</label>
+                </div>
+                <div class="row-form">
+                    <input id="idtMedio" type="radio" name="tamanho" value="medio">
+                    <label for="idtMedio">Médio</label>
+                </div>
+                <div class="row-form">
+                    <input id="idtGrande" type="radio" name="tamanho" value="grande">
+                    <label for="idtGrande">Grande</label>
+                </div>
+                <div class="row-form">
+                    <input id="idtExGrande" type="radio" name="tamanho" value="exGrande">
+                    <label for="idtExGrande">Extra Grande</label>
+                </div>
+            </div>
+
+            <!--Checkbox-->
+            <div class="parte">
+                <label for="idEstiloPreferido">Estilo Preferido:</label>
+                <div class="row-form">
+                    <input id="idDespojado" type="checkbox" name="preta">
+                    <label for="idDespojado">Despojado</label>
+                </div>
+                <div class="row-form">
+                    <input id="idCasual" type="checkbox" name="verde">
+                    <label for="idCasual">Casual</label>
+                </div>
+                <div class="row-form">
+                    <input id="idEsporte" type="checkbox" name="azul">
+                    <label for="idEsporte">Esporte</label>
+                </div>
+                <div class="row-form">
+                    <input id="idSocial" type="checkbox" name="azul">
+                    <label for="idSocial">Social</label>
+                </div>
+            </div>
+            <div class="botao">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </fieldset>
+    </form>
+
+    <form id="agenda" action="agendar" method="get">
+        <fieldset>
+            <legend>Agenda</legend>
+            <label for="idNome">Nome:</label>
+            <input id="idNome" type="text" name="nome" class="nome">
+
+            <label for="idEmail">E-mail:</label>
+            <input id="idEmail" type="email" name="email" class="email">
+
+            <!--Radio-->
+            <div>
+                <label for="tipoEmail">Tipo E-mail:</label>
+                <input id="idComercial" type="radio" name="tipoEmail" value="comercial">
+                <label for="idComercial">Comercial</label>
+
+                <input id="idPessoal" type="radio" name="tipoEmail" value="pessoal">
+                <label for="idPessoal">Pessoal</label>
+            </div>
+
+            <label for="idCargo">Cargo:</label>
+            <select name="cargo">
+                <option disabled selected>Selecione uma opção</option>
+                <option value="pr">Presidente</option>
+                <option value="vp">Vice-Presidente</option>
+                <option value="dr">Diretor</option>
+                <option value="gr">Gerente</option>
+                <option value="sv">Supervisor</option>
+                <option value="as">Assistente</option>
+            </select>
+
+            <label for="idEmpresa">Empresa:</label>
+            <input id="idEmpresa" type="text" name="empresa">
+
+            <label for="idTelComercial">Tel. Comercial:</label>
+            <input id="idTelComercial" type="tel" name="telComercial">
+
+            <label for="idTelCelular">Tel. Celular:</label>
+            <input id="idTelCelular" type="tel" name="telCelular">
+
+            <div>
+                <label for="idTipoContato">Tipo Contato:</label>
+                <input id="idComercial" type="checkbox" name="comercial">
+                <label for="idComercial">Despojado</label>
+
+                <input id="idPessoal" type="checkbox" name="pessoal">
+                <label for="idPessoal">Pessoal</label>
+            </div>
+            <div class="botao">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </fieldset>
+    </form>
+
+    <form id="Evento" action="inscrever" method="post">
+        <fieldset>
+            <legend>Inscrição de Evento</legend>
+            <label for="idNome">Nome:</label>
+            <input id="idNome" type="text" name="nome" class="nome">
+
+            <label for="idEmail">E-mail:</label>
+            <input id="idEmail" type="email" name="email" class="email">
+
+            <label for="idTelefone">Telefone:</label>
+            <input id="idTelefone" type="tel" name="telefone">
+
+            <label for="idDataNascto">Data Nasc:</label>
+            <input id="idDataNascto" type="date" name="dtNascimento">
+
+            <label for="idEmpresa" class="labelTorta">Empresa:</label>
+            <input id="idEmpresa" type="text" name="empresa">
+
+
+            <label for="idCargo">Cargo:</label>
+            <div class="row-form">
+                <input id="idPropSocio" type="radio" name="cargo" value="propSocio">
+                <label for="idPropSocio">Proprietário / Sócio</label>
+            </div>
+            <div class="row-form">
+                <input id="idPresidencia" type="radio" name="cargo" value="presidencia">
+                <label for="idPresidencia">Presidencia</label>
+            </div>
+            <div class="row-form">
+                <input id="idDiretoria" type="radio" name="cargo" value="Diretoria">
+                <label for="idDiretoria">Diretoria</label>
+            </div>
+            <div class="row-form">
+                <input id="idPessoal" type="radio" name="cargo" value="Gerencia">
+                <label for="idPessoal">Gerencia</label>
+            </div>
+            <div class="row-form">
+                <input id="idPessoal" type="radio" name="cargo" value="Supervisao">
+                <label for="idPessoal">Supervisão</label>
+            </div>
+            <div class="row-form">
+                <input id="idPessoal" type="radio" name="cargo" value="Outro">
+                <label for="idPessoal">Outro</label>
+            </div>
+
+            <label for="idCidade">Cidade:</label>
+            <input id="idCidade" type="text" name="cidade">
+
+            <label for="idUF">UF:</label>
+            <select id="idUF" name="uf">
+                <option disabled selected>Selecione uma opção</option>
+                <option value="sp">SP</option>
+                <option value="rj">RJ</option>
+                <option value="mg">MG</option>
+                <option value="pr">PR</option>
+                <option value="sc">SC</option>
+                <option value="df">DF</option>
+            </select>
+
+            <div>
+                <label for="tipoInscricao">Tipo Inscrição:</label>
+                <input id="idPessoaFisica" type="radio" name="tipoInscricao" value="fisica">
+                <label for="idPessoaFisica">Pessoa Física</label>
+
+                <input id="idPessoaJuridica" type="radio" name="tipoInscricao" value="jurisica">
+                <label for="idPessoaJuridica">Pessoa Jurídica</label>
+            </div>
+
+            <div class="parte">
+                <label for="idComoFicouSabendo">Como você ficou sabendo?</label>
+                <div class="row-form">
+                    <input id="idRevista" type="checkbox" name="ficouSabendo">
+                    <label for="idRevista">Revista</label>
+                </div>
+                <div class="row-form">
+                    <input id="idJornais" type="checkbox" name="ficouSabendo">
+                    <label for="idJornais">Jornais</label>
+                </div>
+                <div class="row-form">
+                    <input id="idTelevisao" type="checkbox" name="ficouSabendo">
+                    <label for="idTelevisao">Televisão</label>
+                </div>
+                <div class="row-form">
+                    <input id="idInternet" type="checkbox" name="ficouSabendo">
+                    <label for="idInternet">Internet</label>
+                </div>
+                <div class="row-form">
+                    <input id="idPatrocinadores" type="checkbox" name="ficouSabendo">
+                    <label for="idPatrocinadores">Patrocinadores</label>
+                </div>
+                <div class="row-form">
+                    <input id="idOutros" type="checkbox" name="ficouSabendo">
+                    <label for="idOutros">Outros</label>
+                </div>
+            </div>
+            <div class="parte">
+                <label for="idQualInteresse">Qual interesse no evento?</label>
+                <div class="row-form">
+                    <input id="idPalestras" type="checkbox" name="qualInteresse">
+                    <label for="idPalestras">Palestra</label>
+                </div>
+                <div class="row-form">
+                    <input id="idWorkshops" type="checkbox" name="qualInteresse">
+                    <label for="idWorkshops">Workshops</label>
+                </div>
+                <div class="row-form">
+                    <input id="idEstandes" type="checkbox" name="qualInteresse">
+                    <label for="idEstandes">Estandes</label>
+                </div>
+                <div class="row-form">
+                    <input id="idTreinamentos" type="checkbox" name="qualInteresse">
+                    <label for="idTreinamentos">Treinamentos</label>
+                </div>
+                <div class="row-form">
+                    <input id="idOutros" type="checkbox" name="qualInteresse">
+                    <label for="idOutros">Outros</label>
+                </div>
+            </div>
+
+            <label for="idNomeCracha" class="labelTorta">Nome Crachá:</label>
+            <input id="idNomeCracha" type="text" name="nomeCracha">
+
+            <label for="idFormaPagto">Forma de pagamento:</label>
+            <select id="idFormaPagto" name="uf">
+                <option disabled selected>Selecione uma opção</option>
+                <option value="bb">Boleto Bancario</option>
+                <option value="cc">Cartao de Credito</option>
+            </select>
+
+            <div class="row-form">
+                <input id="idInfosEmail" type="checkbox" name="infoEmail">
+                <label for="idInfosEmail">Deseja receber informações por e-mail?</label>
+            </div>
+            <div class="row-form">
+                <input id="idOutros" type="checkbox" name="qualInteresse">
+                <label for="idOutros">Deseja receber informações por sms?</label>
+            </div>
+
+            <label for="idComentariosGerais">Comentários Gerais:</label>
+            <textarea name="comentariosGerais" id="idComentariosGerais" cols="70" rows="10"></textarea>
+
+            <div class="botao">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </fieldset>
+    </form>
+
+    <form id="IMC" action="calcular" method="post">
+        <fieldset>
+            <legend>Calculo do IMC</legend>
+            <label for="Peso">Peso:</label>
+            <input id="Peso" type="text" name="Peso">
+
+            <label for="Altura">Altura:</label>
+            <input id="Altura" type="text" name="Altura">
+
+            <div class="botao">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </fieldset>
+    </form>
+
+    <form id="Gorjeta" action="calcularGorjeta" method="post">
+        <fieldset>
+            <legend>Calculo de gorjeta</legend>
+            <label for="valorConta">Valor da Conta:</label>
+            <input id="valorConta" type="text" name="valorConta">
+
+            <label for="Gorjeta">% Gorjeta:</label>
+            <select id="Gorjeta" name="uf">
+                <option disabled selected>Selecione uma opção</option>
+                <option value="5">5%</option>
+                <option value="10">10%</option>
+                <option value="15">15%</option>
+                <option value="20">20%</option>
+            </select>
+
+            <label for="NumeroPessoas">Número de pessoas:</label>
+            <input id="NumeroPessoas" type="text" name="NPessoas">
+
+            <div class="botao">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </fieldset>
+    </form>
+
+
+</body>
+
+</html>
